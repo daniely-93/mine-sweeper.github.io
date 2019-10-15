@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
+body {
+    background: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    font-family: 'Merriweather Sans', Times, serif;
+}
+
+.game-board {
+    width: 400px;
+    height: 400px;
+    border: none;
+    background: gray;
+    margin: 0 auto;
+}
+
+.game-buttons {
+    margin: 0 auto;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+}
+
+.separator {
+    border-bottom: 1px solid rgb(126, 126, 126);
+    margin: 10px 0;
+}
+
+.cell-clicked {
+    background-color: rgb(87, 87, 87) !important;
+}
+
+.bc-red {
+    background-color: red !important;
+}
+
+.bc-green {
+    background-color: green !important;
+}
+
+.bc-yellow {
+    background-color: rgba(255, 255, 0, 0.281) !important;
+}
+
+#restart-btn {
+    background-color: #ccc;
+    transition: all .3s;
+}
+
+#restart-btn:hover {
+    background-color: rgb(156, 156, 156);
+    transform: scale(1.01);
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(187, 187, 187);
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.game-levels {
+    color: white;
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.radio-btn {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.radio-btn:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.radio-btn input:checked~.checkmark {
+    background-color: rgb(105, 43, 107);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-btn input:checked~.checkmark:after {
+    display: block;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: none;
+    background-color: rgb(105, 43, 107);
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(58, 25, 59);
+    transform: scale(1.01);
+}
+
+.info {
+    padding: 20px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 10px;
+    top: 10px;
+}
+
+.msg {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.reveal {
+    background: rgb(87, 87, 87);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    margin: 15px auto;
+}
+
+.scores {
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.game-settings {
+    left: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.scores-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.scores ul li {
+    color: green;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.game-area {
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1270px) {
+    .game-board {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .game-board {
+        width: 250px;
+        height: 250px;
+    }
+}

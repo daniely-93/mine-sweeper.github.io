@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>MineSweeper by Daniel Yona</title>
+</head>
+
+<body onload="init()" oncontextmenu="return false;">
+    <div class="game-settings">
+        <div class="game-levels">
+            <p class="title">Board Size :</p>
+            <label class="radio-btn">Easy (4x4)
+                <input type="radio" name="radio" value="4" checked>
+                <span class="checkmark"></span>
+            </label>
+            <label class="radio-btn">Medium (8x8)
+                <input type="radio" name="radio" value="8">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radio-btn">Hard (12x12)
+                <input type="radio" name="radio" value="12">
+                <span class="checkmark"></span>
+            </label>
+            <div class="separator"></div>
+            <label class="radio-btn checkbox">Manually Created
+                <input type="checkbox" name="manually" value="12">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="scores">
+            <p class="title">Best Scores</p>
+            <ul class="scores-list">
+                <li data-level="4">Easy : </li>
+                <li data-level="8">Medium : </li>
+                <li data-level="12">Hard : </li>
+            </ul>
+        </div>
+    </div>
+    <div class="game-area">
+        <table class="game-board">
+        </table>
+        <div class="game-buttons">
+            <input id="safe-btn" class="button" type="button" value="" onclick="safeClick()">
+            <input id="hint-btn" class="button" type="button" value="" onclick="hintClick(this)">
+            <input id="restart-btn" class="button" type="button" value="🌝" onclick="init()">
+        </div>
+    </div>
+        <div class="info">
+            <p class="lives msg"></p>
+            <p class="marks msg"></p>
+            <p class="timer msg">Time Elapsed : 00:00</p>
+        </div>
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
